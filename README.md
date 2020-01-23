@@ -35,21 +35,30 @@ This problem is quite severe and happens even in top of the line hospitals (2). 
 ## Materials:
 
 Hardware:
-- SmartEdge Agile                                  x1.
-https://www.avnet.com/wps/portal/us/solutions/iot/building-blocks/smartedge-agile/
-- Robotic Arm                                      x1.
-https://www.amazon.com/OWI-Robotic-Soldering-Required-Extensive/dp/B0017OFRCY
-- ESP32                                            x2.
-https://www.adafruit.com/product/3405
-- Standed-Core Wire                                x1.
-https://www.adafruit.com/product/2987
-- 8 Channel DC 5V Relay Module with Optocoupler    x1.
-https://www.amazon.com/Elegoo-Module-Optocoupler-Arduino-Raspberry/dp/B07F623PHG
+- NVIDIA Jetson Nano                                x1.
+https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/
+- USB TP-Link USB Wifi Adapter TL-WN725N            x1.
+https://www.amazon.com/dp/B008IFXQFU/ref=cm_sw_em_r_mt_dp_U_jNukEbCWXT0E4
+- Logitech HD Laptop Webcam C615                    x1.
+https://www.amazon.com/dp/B004YW7WCY/ref=cm_sw_em_r_mt_dp_U_8OukEbBJGXVNX
+- 5V-4A AC/DC Adapter Power Supply Jack Connector   x1.
+https://www.amazon.com/dp/B0194B80NY/ref=cm_sw_em_r_mt_dp_U_ISukEbJN7ABK3
 
 Software:
-- Anrduino IDE.
-- Python Anaconda.
-- Cloud MQTT.
+- JetPack 4.3
+https://developer.nvidia.com/jetson-nano-sd-card-image-r3231
+- NodeJS
+https://nodejs.org/
+- ReactJS
+https://reactjs.org/
+- balenaEtcher
+https://www.balena.io/etcher/
+- Jupyter Notebook.
+https://jupyter.org/install
+- TensorFlow Nvidia Version.
+https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
+- AWS.
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
 ## Connection Diagram:
 
@@ -221,7 +230,8 @@ Links
 
 Setup:
 
-export PATH=$PATH:~/.local/bin && sudo apt-get update && sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev -y && sudo apt-get install python3-pip -y && sudo pip3 install -U pip testresources setuptools && sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 enum34 futures protobuf && sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow-gpu
+export PATH=$PATH:~/.local/bin && sudo apt-get update && sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev -y && sudo apt-get install python3-pip -y && sudo pip3 install -U pip testresources setuptools && sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 enum34 futures protobuf && sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow-gpu && sudo pip3 install notebook awscli tqdm && sudo apt-get install python3-matplotlib python3-opencv -y
+
     
     
     python3
