@@ -2,7 +2,7 @@
 
 Anaphylactic Skin Reaction Detection during Chemotherapy
 
-<img src="https://i.ibb.co/p1MvBJF/Logo.png" width="500">
+<img src="https://i.ibb.co/p1MvBJF/Logo.png" width="1000">
 
 # Table of contents
 
