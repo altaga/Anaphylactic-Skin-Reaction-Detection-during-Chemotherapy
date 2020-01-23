@@ -23,7 +23,7 @@ Nowadays we have serious problems in healthcare. Despite the fact that many of t
 
 Cancer patients, for example, have to be treated with chemotherapy continuously, however this process is not simple or pleasant. The worst part of this, is the possibility of being allergic to chemotherapy. Approximately 12 percent of patients who are treated in chemotherapy have an allergic reaction to it, which can trigger a simple blush to death. This is a very studied phenomenon which have several symptoms and phases. One of the main symptoms (1) before severe anaphylaxis in this type of treatment is flushing of the face, after that there may be symptoms such as:
 
-<img src="https://i.ibb.co/bmLWkqG/image.png" width="1000">
+<img src="https://i.ibb.co/dWqB4zr/image.png" width="1000">
 
 If the first symptoms regarding flushing, blushing and facial redness can be detected faster, we can avoid most of the more severe ones by administering treatment promptly.
 
