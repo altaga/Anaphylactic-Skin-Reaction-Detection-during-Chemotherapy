@@ -64,11 +64,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
 This is the connection diagram of the system:
 
-<img src="https://i.ibb.co/TTHwbv7/Digram-Rehab.png" width="800">
-
-Arm Connection Diagram:
-
-<img src="https://hackster.imgix.net/uploads/attachments/942233/68747470733a2f2f692e6962622e636f2f4832344451384e2f41524d2d62622e706e67.png" width="800">
+<img src="https://i.ibb.co/0GPWx3j/Diagram-Recovered.png" width="800">
 
 ## Brainium Setup:
 
