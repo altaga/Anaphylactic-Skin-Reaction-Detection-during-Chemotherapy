@@ -96,7 +96,7 @@ https://www.pcworld.com/article/3176712/how-to-format-an-sd-card-in-linux.html
 
 My computer does not have an SD card reader so I use this external (any reader it's ok).
 
-<img src="https://i.ibb.co/524GbqV/20200125-180653.jpg" width="600">
+<img src="https://i.ibb.co/drrQkgs/20200125-180653.jpg" width="600">
 
 And this is the software SD card formatter, I especially like this program because this type of operating system creates multiple partitions in the SD memories and the format of them can be complicated if we want to reformat later, however this program does everything automatically.
 
