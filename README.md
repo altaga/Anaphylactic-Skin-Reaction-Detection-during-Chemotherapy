@@ -146,7 +146,54 @@ Connect the Jetson Nano to the screen using the HDMI cable, connect the wireless
 
 <img src="https://i.ibb.co/NY3t4pc/Hardwaresetup.png" width="600">
 
-We will configure the operating system, in the following video i show how to do this configuration, it is very simple.
+We will configure the operating system, it is very simple.
+
+* Accept the terms.
+
+<img src="https://i.ibb.co/5T55mgJ/20200126-015446.jpg" width="600">
+
+* Select your language.
+
+<img src="https://i.ibb.co/MSBkGmV/20200126-015511.jpg" width="600">
+
+* Select your keyboard layout.
+
+<img src="https://i.ibb.co/W5TGWtH/20200126-015531.jpg" width="600">
+
+* Configure your wifi.
+
+<img src="https://i.ibb.co/KFB4wC3/20200126-015605.jpg" width="600">
+
+* Select your region.
+
+<img src="https://i.ibb.co/F6q0vv9/20200126-015658.jpg" width="600">
+
+* Select your credentials.
+
+**SUPER IMPORTANT NOTE: CHECK THE OPTION "Log in Automatically"**
+
+<img src="https://i.ibb.co/9Vw9f9H/20200126-015742.jpg" width="600">
+
+* Click ok to expand your Partition Size.
+
+<img src="https://i.ibb.co/NmC0XGn/20200126-015755.jpg" width="600">
+
+* Wait a couple of minutes.
+
+<img src="https://i.ibb.co/c89BKHk/20200126-015853.jpg" width="600">
+
+* If everything works, you will see a screen like this.
+
+<img src="https://i.ibb.co/Th0TXT5/image.png" width="1000">
+
+* Para la configuracion final hemos preparado un pequeño video para que quede muy claro como se realiza el siguiente proceso.
+
+Final OS Setup: Click on the image (YouTube Link)
+[![Rehab](https://i.ibb.co/p1MvBJF/Logo.png)](https://youtu.be/2p1misKoRfI)
+
+Sorry github does not allow embed videos.
+
+* With this you should already have everything configured, from now the HDMI cable and the wireless keyboard are no longer necessary. All programming and final setup will be done through SSH.
 
 
 
