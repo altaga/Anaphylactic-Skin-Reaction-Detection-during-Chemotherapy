@@ -189,7 +189,7 @@ We will configure the operating system, it is very simple.
 * Para la configuracion final hemos preparado un pequeño video para que quede muy claro como se realiza el siguiente proceso.
 
 Final OS Setup: Click on the image (YouTube Link)
-[![Rehab](https://i.ibb.co/p1MvBJF/Logo.png)](https://youtu.be/2p1misKoRfI)
+[![Rehab](https://i.ibb.co/p1MvBJF/Logo.png)](https://youtu.be/B8QlQ_tcZxs)
 
 Sorry github does not allow embed videos.
 
