@@ -79,10 +79,15 @@ Official Link: https://developer.nvidia.com/embedded/jetpack
 You'll need to unzip the file to get the image file (.img) to write to your SD card, If you do not have a program to unzip, i recommend any of the following according to your operating system (windows in my case).
 
 7-Zip (Windows)
+
 https://www.7-zip.org/
+
 The Unarchiver (Mac)
+
 https://theunarchiver.com/
+
 Unzip (Linux)
+
 https://linuxize.com/post/how-to-unzip-files-in-linux/
 
 <img src="https://i.ibb.co/tx4ZSpb/image.png" width="600">
@@ -90,8 +95,11 @@ https://linuxize.com/post/how-to-unzip-files-in-linux/
 NOTE: don't forget format your SD with this program.
 
 Windows and Mac.
+
 https://www.sdcard.org/downloads/formatter/index.html
+
 Linux:
+
 https://www.pcworld.com/article/3176712/how-to-format-an-sd-card-in-linux.html
 
 My computer does not have an SD card reader so I use this external (any reader it's ok).
