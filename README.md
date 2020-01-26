@@ -9,47 +9,6 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Introduction](#introduction)
 * [Materials](#materials)
 * [Connection Diagram](#connection-diagram)
-* [Brainium Setup](#brainium-setup)
-* [CloudMQTT Setup](#cloudmqtt-setup)
-* [Laptop Setup](#laptop-setup)
-* [Arm Setup](#arm-setup)
-* [The Final Product](#the-final-product)
-* [Future Rollout](#future-rollout)
-* [References](#references)
-
-## Introduction:
-
-Nowadays we have serious problems in healthcare. Despite the fact that many of them have already been solved with technology, many times the industry is reluctant to change and adopt new technologies. 
-
-Cancer patients, for example, have to be treated with chemotherapy continuously, however this process is not simple or pleasant. The worst part of this, is the possibility of being allergic to chemotherapy. Approximately 12 percent of patients who are treated in chemotherapy have an allergic reaction to it, which can trigger a simple blush to death. This is a very studied phenomenon which have several symptoms and phases. One of the main symptoms (1) before severe anaphylaxis in this type of treatment is flushing of the face, after that there may be symptoms such as:
-
-<img src="https://i.ibb.co/5cmbf4K/image.png" width="1000">
-
-If the first symptoms regarding flushing, blushing and facial redness can be detected faster, we can avoid most of the more severe ones by administering treatment promptly.
-
-This problem is quite severe and happens even in top of the line hospitals (2). Personally I worked in one of these, and to my surprise these kinds of reactions happen quite often and I think that AI and CV technologies have the capability to tend to this problem faster and directly so medical professionals can have a faster reaction to it.
-
-(1) https://ctep.cancer.gov/protocolDevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_8.5x11.pdf
-(2) https://www.ncbi.nlm.nih.gov/books/NBK333506/table/ch04.sec1.table1/
-
-## Materials:
-
-Hardware:
-- NVIDIA Jetson Nano                                x1.
-https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/
-- USB TP-Link USB Wifi Adapter TL-WN725N            x1.
-https://www.amazon.com/dp/B008IFXQFU/ref=cm_sw_em_r_mt_dp_U_jNukEbCWXT0E4
-- Logitech HD Laptop Webcam C615                    x1.# Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy
-
-Anaphylactic Skin Reaction Detection during Chemotherapy
-
-<img src="https://i.ibb.co/p1MvBJF/Logo.png" width="1000">
-
-# Table of contents
-
-* [Introduction](#introduction)
-* [Materials](#materials)
-* [Connection Diagram](#connection-diagram)
 * [Jetson Setup](#jetson-setup)
 * [CloudMQTT Setup](#cloudmqtt-setup)
 * [Laptop Setup](#laptop-setup)
