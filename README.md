@@ -108,7 +108,7 @@ https://linuxize.com/post/how-to-unzip-files-in-linux/
 
 <img src="https://i.ibb.co/tx4ZSpb/image.png" width="600">
 
-NOTE: don't forget format your SD with this program.
+### Format your SD.
 
 Windows and Mac:
 
@@ -125,6 +125,8 @@ My computer does not have an SD card reader so I use this external (any reader i
 And this is the software SD card formatter, I especially like this program because this type of operating system creates multiple partitions in the SD memories and the format of them can be complicated if we want to reformat later, however this program does everything automatically.
 
 <img src="https://i.ibb.co/yQ0mmc1/image.png" width="400">
+
+### Flash the sd card with the OS
 
 You will need to use an image writing tool to install the image you have downloaded on your SD card, I recommend balenaEtcher it works on all OS and it is not necessary to unzip the .zip to perform the OS flash.
 
@@ -250,6 +252,10 @@ With this process we will have all the libraries installed correctly:
 * Jupyter Notebook
 * PahoMQTT
 * OpenCV (No Contrib Version)
+
+### Cloud Credentials Setup:
+
+
 
 ## Model Training:
 
