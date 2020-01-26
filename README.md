@@ -47,19 +47,19 @@ https://www.amazon.com/dp/B06XWN9Q99/ref=cm_sw_em_r_mt_dp_U_XTllEbK0VKMAZ
 https://www.amazon.com/dp/B0194B80NY/ref=cm_sw_em_r_mt_dp_U_ISukEbJN7ABK3
 
 Software:
-- JetPack 4.3
+- JetPack 4.3:
 https://developer.nvidia.com/jetson-nano-sd-card-image-r3231
-- NodeJS
+- NodeJS:
 https://nodejs.org/
-- ReactJS
+- ReactJS:
 https://reactjs.org/
-- balenaEtcher
+- balenaEtcher:
 https://www.balena.io/etcher/
-- Jupyter Notebook.
+- Jupyter Notebook:
 https://jupyter.org/install
-- TensorFlow Nvidia Version.
+- TensorFlow Nvidia Version:
 https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
-- AWS.
+- AWS:
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
 ## Connection Diagram:
@@ -78,15 +78,15 @@ Official Link: https://developer.nvidia.com/embedded/jetpack
 
 You'll need to unzip the file to get the image file (.img) to write to your SD card, If you do not have a program to unzip, i recommend any of the following according to your operating system (windows in my case).
 
-7-Zip (Windows)
+7-Zip (Windows):
 
 https://www.7-zip.org/
 
-The Unarchiver (Mac)
+The Unarchiver (Mac):
 
 https://theunarchiver.com/
 
-Unzip (Linux)
+Unzip (Linux):
 
 https://linuxize.com/post/how-to-unzip-files-in-linux/
 
@@ -94,7 +94,7 @@ https://linuxize.com/post/how-to-unzip-files-in-linux/
 
 NOTE: don't forget format your SD with this program.
 
-Windows and Mac.
+Windows and Mac:
 
 https://www.sdcard.org/downloads/formatter/index.html
 
