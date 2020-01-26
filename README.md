@@ -35,16 +35,24 @@ This problem is quite severe and happens even in top of the line hospitals (2). 
 ## Materials:
 
 Hardware:
-- NVIDIA Jetson Nano                                x1.
+- NVIDIA Jetson Nano.                                x1.
 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/
-- USB TP-Link USB Wifi Adapter TL-WN725N            x1.
+- USB TP-Link USB Wifi Adapter TL-WN725N.            x1.
 https://www.amazon.com/dp/B008IFXQFU/ref=cm_sw_em_r_mt_dp_U_jNukEbCWXT0E4
-- Logitech HD Laptop Webcam C615                    x1.
+- Logitech HD Laptop Webcam C615.                   x1.
 https://www.amazon.com/dp/B004YW7WCY/ref=cm_sw_em_r_mt_dp_U_8OukEbBJGXVNX
-- 32 GB MicroSD Card                                x1.
+- 32 GB MicroSD Card.                                x1.
 https://www.amazon.com/dp/B06XWN9Q99/ref=cm_sw_em_r_mt_dp_U_XTllEbK0VKMAZ
-- 5V-4A AC/DC Adapter Power Supply Jack Connector   x1.
+- 5V-4A AC/DC Adapter Power Supply Jack Connector.   x1.
 https://www.amazon.com/dp/B0194B80NY/ref=cm_sw_em_r_mt_dp_U_ISukEbJN7ABK3
+
+Only for Setup Hardware:
+Any screen with HDMI (I recommend having one).       x1.
+https://www.amazon.com/dp/B07NNXH2SS/ref=cm_sw_em_r_mt_dp_U_8OrlEb9J2D08W
+HDMI cable.                                          x1.
+https://www.amazon.com/dp/B075ZTJ9XR/ref=cm_sw_em_r_mt_dp_U_KLrlEb1EPH5NY
+Wireless Keyboard.                                   x1.
+https://www.amazon.com/dp/B00I5SW8MC/ref=cm_sw_em_r_mt_dp_U_CTrlEbQZ3VS8F
 
 Software:
 - JetPack 4.3:
@@ -68,7 +76,15 @@ This is the connection diagram of the system:
 
 <img src="https://i.ibb.co/0GPWx3j/Diagram-Recovered.png" width="800">
 
-## Jetson SD card Setup:
+## Jetson Setup:
+
+### Jetson Source Setup:
+
+Because we power the Jetson Nano through an external 5-volt source with a Jack connector, we will have to place a Jumper on the J48 connector of the Jetson as shown in the image.
+
+<img src="https://i.ibb.co/BGFzj9k/jumper.png" width="800">
+
+### Jetson SD card Setup:
 
 This is the explanation on how to install the Jetson SDK OS image on an SD card. You will need a computer with an SD card reader to install the image.
 
@@ -119,6 +135,20 @@ Download Link: https://www.balena.io/etcher/
 Once the process is completed correctly we see the following message.
 
 <img src="https://i.ibb.co/zJSdVG4/image.png" width="600">
+
+### Jetson OS Setup:
+
+Insert the SD into the SD slot of the Jetson Nano.
+
+<img src="https://i.ibb.co/YPKS7QF/Slot.png" width="600">
+
+Connect the Jetson Nano to the screen using the HDMI cable, connect the wireless keyboard receiver, connect the network card and connect the power supply.
+
+<img src="https://i.ibb.co/NY3t4pc/Hardwaresetup.png" width="600">
+
+We will configure the operating system, in the following video i show how to do this configuration, it is very simple.
+
+
 
 ## Model Training:
 
