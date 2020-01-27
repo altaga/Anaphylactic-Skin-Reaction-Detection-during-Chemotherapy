@@ -247,15 +247,55 @@ Once the wireless connection to the console is established, we will have to copy
 With this process we will have all the libraries installed correctly:
 
 * TensorFlow 2.0
-* Awscli
+* Awscli (we haven't finished setup this library)
 * Numpy
 * Jupyter Notebook
 * PahoMQTT
 * OpenCV (No Contrib Version)
 
-### Cloud Credentials Setup:
+Una vez este proceso haya concluido, revisaremos que Jupyter Notebook funcione correctamente, ya que sera nuestra UI en el resto del tutorial. Escribe en la consola el siguiente comando.
 
+    jupyter notebook
 
+Debera aparecer en el terminal algo asi.
+
+<img src="imageng" width="600">
+
+Copia el Token que aparece en la pantalla y sin cerrar esta ventana ir al tu navegador y poner en la barra de direcciones:
+
+    localhost:8000
+
+Debera aparecer una ventana como la siguiente:
+
+<img src="imageng" width="600">
+
+En la seccion donde nos pide el token, pegaremos token que copiamos hace unos momentos.
+
+<img src="imageng" width="600">
+
+Si el token es valido deberiamos tener en el navegador los archivos de la Jetson, esto es importante ya que esta ventana nos permite gestionar los archivos de manera sencilla, ademas de poder ejecutar los archivos del proyecto.
+
+### Configurando AWS Jetson:
+
+Primero deberemos acceder a nuestra consola de AWS y buscar el servicio IoT Core.
+
+<img src="https://i.ibb.co/KVbtQLR/image.png" width="600">
+
+En el panel lateral seleccionaremos la "Things".
+
+<img src="https://i.ibb.co/ZfyKw2P/image.png" width="600">
+
+Selecciona "Create".
+
+<img src="https://i.ibb.co/ZxbNC05/image.png" width="600">
+
+Selecciona "Create a Single Thing"
+
+<img src="https://i.ibb.co/hdXHCHt/image.png" width="600">
+
+### Awscli Setup:
+
+Esta es la libreria de AWS para poder gestionar y realizar acciones en cloud mediante Python, por lo tanto tendremos realizar la siguiente configuracion 
 
 ## Model Training:
 
@@ -413,7 +453,7 @@ Install.sh Content:
 
     sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow-gpu 
 
-    sudo pip3 install notebook awscli 
+    sudo pip3 install notebook awscli paho-mqtt
 
     sudo apt-get install python3-matplotlib python3-opencv python3-scipy -y 
 
