@@ -17,7 +17,7 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Future Rollout](#future-rollout)
 * [References](#references)
 
-## Introduction:
+# Introduction:
 
 Nowadays we have serious problems in healthcare. Despite the fact that many of them have already been solved with technology, many times the industry is reluctant to change and adopt new technologies. 
 
@@ -33,7 +33,7 @@ This problem is quite severe and happens even in top of the line hospitals (2). 
 
 (2) https://www.ncbi.nlm.nih.gov/books/NBK333506/table/ch04.sec1.table1/
 
-## Materials:
+# Materials:
 
 Hardware:
 - NVIDIA Jetson Nano.                                x1.
@@ -71,21 +71,21 @@ https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index
 - AWS:
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
-## Connection Diagram:
+# Connection Diagram:
 
 This is the connection diagram of the system:
 
 <img src="https://i.ibb.co/0GPWx3j/Diagram-Recovered.png" width="800">
 
-## Jetson Setup:
+# Jetson Setup:
 
-### Jetson Source Setup:
+## Jetson Source Setup:
 
 Because we power the Jetson Nano through an external 5-volt source with a Jack connector, we will have to place a Jumper on the J48 connector of the Jetson as shown in the image.
 
 <img src="https://i.ibb.co/BGFzj9k/jumper.png" width="800">
 
-### Jetson SD card Setup:
+## Jetson SD card Setup:
 
 This is the explanation on how to install the Jetson SDK OS image on an SD card. You will need a computer with an SD card reader to install the image.
 
@@ -109,7 +109,7 @@ https://linuxize.com/post/how-to-unzip-files-in-linux/
 
 <img src="https://i.ibb.co/tx4ZSpb/image.png" width="600">
 
-### Format your SD.
+## Format your SD.
 
 Windows and Mac:
 
@@ -127,7 +127,7 @@ And this is the software SD card formatter, I especially like this program becau
 
 <img src="https://i.ibb.co/yQ0mmc1/image.png" width="400">
 
-### Flash the sd card with the OS
+## Flash the sd card with the OS
 
 You will need to use an image writing tool to install the image you have downloaded on your SD card, I recommend balenaEtcher it works on all OS and it is not necessary to unzip the .zip to perform the OS flash.
 
@@ -195,7 +195,7 @@ We will configure the operating system, it is very simple.
 
 * With this you should already have everything configured, from now the HDMI cable and the wireless keyboard are no longer necessary. All programming and final setup will be done through SSH.
 
-### SSH Setup:
+## SSH Setup:
 
 For this step we will create an ssh connection with the Jetson, if you have Mac or Linux are already preconfigured with OpenSSH library, so you can start your connection from the terminal with the following command.
 
@@ -227,7 +227,7 @@ After putting the password in the command console, this window will appear, indi
 
 <img src="https://i.ibb.co/brWpyCW/image.png" width="600">
 
-### Libraries Setup:
+## Libraries Setup:
 
 Once the wireless connection to the console is established, we will have to copy and paste the following commands into it and execute them.
 
@@ -276,7 +276,7 @@ En la seccion donde nos pide el token, pegaremos token que copiamos hace unos mo
 
 Si el token es valido deberiamos tener en el navegador los archivos de la Jetson, esto es importante ya que esta ventana nos permite gestionar los archivos de manera sencilla, ademas de poder ejecutar los archivos del proyecto.
 
-### Configurando AWS Jetson:
+## Configurando AWS Jetson:
 
 Primero deberemos acceder a nuestra consola de AWS y buscar el servicio IoT Core.
 
@@ -365,7 +365,9 @@ Presiona cada uno de los botones de "upload" de color azul para terminar la subi
 
 <img src="https://i.ibb.co/k6X04K2/image.png" width="600">
 
-### Awscli Setup:
+Listo ya tenemos las credenciales listas para funcionar.
+
+## Awscli Setup:
 
 Esta es la libreria de AWS para poder gestionar y realizar acciones en cloud mediante Python, por lo tanto tendremos realizar la siguiente configuracion.
 
@@ -408,11 +410,19 @@ Configura las credenciales de la siguiente forma
 
 Listo ya hemos configurado completamente la Jetson Nano.
 
-# Model Training:
+# Webpage Setup:
 
-Before performing any other task, it was vital to be able to generate a model for elbow rehabilitation, the system can be extended to any rehabilitation but we chose elbow as the first sample.
+Para configurar la pagina web deberemos tener instalado en nuestro ordenador NodeJS y haber descargado el proyecto en nuestra computadora.
 
-4 basic movements were programmed for the rehabilitation of the elbow, of which 3 of them will be used in the final rehabilitation.
+Link: https://nodejs.org/es/
+
+Una vez instalado entrar en la capeta del proyecto llamada "ReactAPP".
+
+<img src="https://i.ibb.co/NsHJj18/image.png" width="600">
+
+Una vez dentro de la carpeta abre el terminal o en caso de windows el cmd.
+
+NOTA: En windows si estas dentro de una carpeta y en la barra de direccion escribes "cmd" se abrira ahi la consola de comandos.
 
 Elbow flexoextension:
 
