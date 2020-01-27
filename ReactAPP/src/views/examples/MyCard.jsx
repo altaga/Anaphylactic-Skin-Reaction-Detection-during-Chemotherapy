@@ -7,6 +7,8 @@ import {
     Col
   } from "reactstrap";
 
+  var bucket="https://yourbucketname.s3.amazonaws.com/";
+
 class MyCard extends React.Component {
 
   render() {
@@ -20,7 +22,7 @@ class MyCard extends React.Component {
                         <img
                           alt="..."
                           className="rounded-circle"
-                          src={"https://hackster-hackster.s3.amazonaws.com/"+this.props.imge+".jpg"}
+                          src={bucket+this.props.imge+".jpg"}
                         />
                       </a>
                     </div>

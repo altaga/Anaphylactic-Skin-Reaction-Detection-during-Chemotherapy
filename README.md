@@ -282,6 +282,10 @@ Primero deberemos acceder a nuestra consola de AWS y buscar el servicio IoT Core
 
 <img src="https://i.ibb.co/KVbtQLR/image.png" width="600">
 
+Primero obtendremos nuestro Endpoint de AWS, guarda muy bien esto ya que lo usaremos para configurar la Jetson y la Webpage.
+
+<img src="https://i.ibb.co/ZYwrdfR/image.png" width="600">
+
 En el panel lateral seleccionaremos la opcion de "Onboard" y luego en la opcion de "Get started".
 
 <img src="https://i.ibb.co/gmKxc7P/image.png" width="600">
@@ -412,7 +416,157 @@ Listo ya hemos configurado completamente la Jetson Nano.
 
 # Webpage Setup:
 
-Para configurar la pagina web deberemos tener instalado en nuestro ordenador NodeJS y haber descargado el proyecto en nuestra computadora.
+## Aws Credentials Setup:
+
+Entrar en la consola de AWS y buscar el servicio "Cognito".
+
+<img src="https://i.ibb.co/nrF8P0W/image.png" width="600">
+
+Entramos en "Manage Identity Pools"
+
+<img src="https://i.ibb.co/Rh0mMQL/image.png" width="600">
+
+Entramos en "Manage Identity Pools"
+
+<img src="https://i.ibb.co/GMHB0d2/image.png" width="600">
+
+Entramos en "Create new identity pool"
+
+<img src="https://i.ibb.co/Rh0mMQL/image.png" width="600">
+
+Le ponemos cualquier nombre a la pool y check a "Enable access to unauthenticated identities" y le presionamos en "Create Pool"
+
+<img src="https://i.ibb.co/VJS43ff/Untitled-2.png" width="600">
+
+En la siguiente ventana solo da clic en "Allow".
+
+<img src="https://i.ibb.co/c3qgj5H/image.png" width="600">
+
+Obtuvimos nuestro POOLID guardalo que lo usaremos mas adelante.
+
+<img src="https://i.ibb.co/xhBfqVk/image.png" width="600">
+
+Ve a la consola de AWS y entra a "IAM".
+
+<img src="https://i.ibb.co/qk3LP62/image.png" width="600">
+
+Dentro de la consola entra a la seccion de Roles en la barra de busqueda escibe "web" y entra en la que dice "Cognito_WebPagePoolUnauth_Role".
+
+<img src="https://i.ibb.co/r0kcdvz/image.png" width="600">
+
+Dentro del Role presionamos el boton de Attach policies para agregar los servicios que requerimos dentro de nuestra WebApp.
+
+<img src="https://i.ibb.co/vZdLsFj/image.png" width="600">
+
+Dentro de esta ventana tenemos que agregar 3 servicios.
+
+* AmazonS3FullAccess
+* AWSIoTFullAccess
+* AmazonDynamoDBFullAccess
+
+<img src="https://i.ibb.co/mFY33w9/image.png" width="600">
+
+Ya que tenemos creados los permisos vamos a configurar la base de datos donde tendremos almacenados a los pacientes, desde la consola de AWS buscaremos el servicio DynamoDB.
+
+<img src="https://i.ibb.co/W3MH7Zf/image.png" width="600">
+
+Seleccionamos la opcion de Create Table.
+
+<img src="https://i.ibb.co/k35HZ30/image.png" width="600">
+
+Crea la tabla con los siguientes parametros, es importante que los nombres sean los mismos que estamos mostrando en la imagen.
+
+Name: HacksterDB
+Partition Key: PartKey
+Sort Key: SortKey
+
+<img src="https://i.ibb.co/dbFqpF6/image.png" width="600">
+
+Una vez creada la tabla podremos generar registros en ella de pacientes que podremos visualizar en nuestra plataforma, los registros deben de llevar la siguiente estructura.
+
+    {
+    "Age": "56",
+    "App": " 03/03/2020",
+    "Cancer": "Sarcoma",
+    "Comments": "Entrepreneur, if you don't have at least one TitanRTX on your computer, don't talk with him",
+    "Incidents": "1",
+    "Medicine": "Carboplatin",
+    "PartKey": "dev1",
+    "SortKey": "Jen-Hsun Huang"
+    }
+
+* Descipcion del registro:
+    * Age: La edad de la persona
+    * App: Fecha de su siguiente cita
+    * Cancer: Tipo de Cancer de la persona
+    * Comments: Comentarios extra sobre la persona
+    * Incidents: Numero de incidentes hasta la fecha
+    * Medicine: Medicina que se le proporciona al paciente
+    * PartKey: El device que esta mandando el registro
+    * SortKey: Nombre del paciente
+
+Por ultimo vamos a crear un S3 bucket el cual nos sirva para almacenar cualquier archivo o imagen que necesitemos. Desde la consola de AWS buscaremos el servicio S3.
+
+<img src="https://i.ibb.co/dtCKMBj/image.png" width="600">
+
+Dentro del servicio de S3 presionamos el boton para crear un bucket.
+
+<img src="https://i.ibb.co/zstLq8T/image.png" width="600">
+
+Pon el nombre que gustes al bucket, pero anotalo que lo configuraremos despues.
+
+<img src="https://i.ibb.co/PDmWFrs/image.png" width="600">
+
+Uncheck todas las opciones de bloqueo como se muestran en la imagen.
+
+<img src="https://i.ibb.co/FW4Fqbv/image.png" width="600">
+
+Una vez termines esto, ya tendremos todo listo para configurar nuetsra WebAPP.
+
+<img src="https://i.ibb.co/2ZP8mw0/image.png" width="600">
+
+Uncheck todas las opciones de bloqueo como se muestran en la imagen.
+
+<img src="https://i.ibb.co/FW4Fqbv/image.png" width="600">
+
+Ya con esto habremos creado nuestro bucket, el cual tiene el siguiente URL.
+
+    https://yourbucketname.s3.amazonaws.com/
+
+## Add credentials to WebPage
+
+Descargar el proyecto de Github en su computadora.
+
+<img src="https://i.ibb.co/Ksd8Y42/image.png" width="600">
+
+Entra dentro de la carpeta del proyecto entra en la siguiente ruta ReactAPP\src\views\examples.
+
+<img src="https://i.ibb.co/Xt0yFmm/image.png" width="600">
+
+Con el editor de tu preferencia abre los siguientes archivos.
+
+* aws-configuration.js
+* MyCard.jsx
+* Card.jsx
+* Profile.jsx
+
+Dentro de aws-configuration.js vamos a pegar nuestro POOLID y nuestro AWS Endpoint.
+
+<img src="https://i.ibb.co/tsYPQBw/image.png" width="600">
+
+Dentro de MyCard.jsx vamos a pegar nuestro Url de Bucket.
+
+<img src="https://i.ibb.co/TWscqmB/image.png" width="600">
+
+Dentro de Card.jsx vamos a pegar nuestro Url de Bucket.
+
+<img src="https://i.ibb.co/bbJdCPS/image.png" width="600">
+
+Dentro de Profile.jsx vamos a pegar el nombre de la DB que le pusimos si el nombre que le pusiste a la DB fue "HacksterDB" no tienes te hacer nada mas.
+
+<img src="https://i.ibb.co/HpsxRFp/image.png" width="600">
+
+Para poder visualizar la DB en un navegador debemos instalar en nuestro ordenador NodeJS.
 
 Link: https://nodejs.org/es/
 
@@ -423,6 +577,20 @@ Una vez instalado entrar en la capeta del proyecto llamada "ReactAPP".
 Una vez dentro de la carpeta abre el terminal o en caso de windows el cmd.
 
 NOTA: En windows si estas dentro de una carpeta y en la barra de direccion escribes "cmd" se abrira ahi la consola de comandos.
+
+<img src="https://i.ibb.co/F3b8GGd/ezgif-2-e535d3643141.gif" width="600">
+
+In the cmd or terminal wrtite the next commmand.
+
+    npm install
+
+<img src="https://i.ibb.co/bgp4Ms6/image.png" width="600">
+
+Despues de un rato que se hayan instalado todas las dependencias del proyecto escribiremos en la consola.
+
+    npm start
+
+<img src="https://i.ibb.co/SPdkwZL/ezgif-com-video-to-gif-2.gif" width="600">
 
 Elbow flexoextension:
 

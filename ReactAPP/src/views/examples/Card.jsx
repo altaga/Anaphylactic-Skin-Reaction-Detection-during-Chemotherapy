@@ -18,6 +18,8 @@ const useStyles = makeStyles({
   },
 });
 
+var mybucket = "https://yourbucketname.s3.amazonaws.com/";
+
 export default function MediaCard(props) {
   const classes = useStyles();
 
@@ -26,7 +28,7 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://hackster-hackster.s3.amazonaws.com/input.jpg"
+          image={mybucket+input.jpg}
           title="Contemplative Reptile"
         />
         <CardContent>

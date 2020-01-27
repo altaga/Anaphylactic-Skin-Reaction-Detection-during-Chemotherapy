@@ -35,6 +35,8 @@ import {
 // core components
 import UserHeader from "components/Headers/UserHeader.jsx";
 
+var Dbname="HacksterDB";
+
 var AWS = require('aws-sdk');
   var AWSConfiguration = require('./aws-configuration.js');
   AWS.config.region = AWSConfiguration.region;
@@ -73,7 +75,7 @@ componentDidMount() {
         }
       }, 
       KeyConditionExpression: "PartKey = :v1", 
-      TableName: "HacksterDB"
+      TableName: Dbname
      };
     
     dynamodb.query(params, function(err, data) {
