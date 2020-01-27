@@ -10,7 +10,7 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Materials](#materials)
 * [Connection Diagram](#connection-diagram)
 * [Jetson Setup](#jetson-setup)
-* [CloudMQTT Setup](#cloudmqtt-setup)
+* [Model Training](#model-training)
 * [Laptop Setup](#laptop-setup)
 * [Arm Setup](#arm-setup)
 * [The Final Product](#the-final-product)
@@ -30,6 +30,7 @@ If the first symptoms regarding flushing, blushing and facial redness can be det
 This problem is quite severe and happens even in top of the line hospitals (2). Personally I worked in one of these, and to my surprise these kinds of reactions happen quite often and I think that AI and CV technologies have the capability to tend to this problem faster and directly so medical professionals can have a faster reaction to it.
 
 (1) https://ctep.cancer.gov/protocolDevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_8.5x11.pdf
+
 (2) https://www.ncbi.nlm.nih.gov/books/NBK333506/table/ch04.sec1.table1/
 
 ## Materials:
@@ -47,11 +48,11 @@ https://www.amazon.com/dp/B06XWN9Q99/ref=cm_sw_em_r_mt_dp_U_XTllEbK0VKMAZ
 https://www.amazon.com/dp/B0194B80NY/ref=cm_sw_em_r_mt_dp_U_ISukEbJN7ABK3
 
 Only for Setup Hardware:
-Any screen with HDMI (I recommend having one).       x1.
+* Any screen with HDMI (I recommend having one).       x1.
 https://www.amazon.com/dp/B07NNXH2SS/ref=cm_sw_em_r_mt_dp_U_8OrlEb9J2D08W
-HDMI cable.                                          x1.
+* HDMI cable.                                          x1.
 https://www.amazon.com/dp/B075ZTJ9XR/ref=cm_sw_em_r_mt_dp_U_KLrlEb1EPH5NY
-Wireless Keyboard.                                   x1.
+* Wireless Keyboard.                                   x1.
 https://www.amazon.com/dp/B00I5SW8MC/ref=cm_sw_em_r_mt_dp_U_CTrlEbQZ3VS8F
 
 Software:
@@ -259,7 +260,7 @@ Una vez este proceso haya concluido, revisaremos que Jupyter Notebook funcione c
 
 Debera aparecer en el terminal algo asi.
 
-<img src="imageng" width="600">
+<img src="https://i.ibb.co/YD0DMBs/image.png" width="600">
 
 Copia el Token que aparece en la pantalla y sin cerrar esta ventana ir al tu navegador y poner en la barra de direcciones:
 
@@ -267,11 +268,11 @@ Copia el Token que aparece en la pantalla y sin cerrar esta ventana ir al tu nav
 
 Debera aparecer una ventana como la siguiente:
 
-<img src="imageng" width="600">
+<img src="https://i.ibb.co/Y8dkkrM/image.png" width="600">
 
 En la seccion donde nos pide el token, pegaremos token que copiamos hace unos momentos.
 
-<img src="imageng" width="600">
+<img src="https://i.ibb.co/LtkbFkF/image.png" width="600">
 
 Si el token es valido deberiamos tener en el navegador los archivos de la Jetson, esto es importante ya que esta ventana nos permite gestionar los archivos de manera sencilla, ademas de poder ejecutar los archivos del proyecto.
 
@@ -281,23 +282,133 @@ Primero deberemos acceder a nuestra consola de AWS y buscar el servicio IoT Core
 
 <img src="https://i.ibb.co/KVbtQLR/image.png" width="600">
 
-En el panel lateral seleccionaremos la "Things".
+En el panel lateral seleccionaremos la opcion de "Onboard" y luego en la opcion de "Get started".
 
-<img src="https://i.ibb.co/ZfyKw2P/image.png" width="600">
+<img src="https://i.ibb.co/gmKxc7P/image.png" width="600">
 
-Selecciona "Create".
+Selecciona "Get started".
 
-<img src="https://i.ibb.co/ZxbNC05/image.png" width="600">
+<img src="https://i.ibb.co/XSxSxbF/image.png" width="600">
 
-Selecciona "Create a Single Thing"
+En Choose a Platform selecciona "Linux/OSX" en AWS IoT Device SDK selecciona "Python" y haz clic en "Next". 
 
-<img src="https://i.ibb.co/hdXHCHt/image.png" width="600">
+<img src="https://i.ibb.co/JR69Fdd/image.png" width="600">
+
+En Name escribe cualquier nombre que te parezca conveniente y haz clic en "Next step". 
+
+<img src="https://i.ibb.co/NNLqqM0/image.png" width="600">
+
+En la seccion "Download connection kit for" presiona el boton "Linux/OSX" para descargar el paquete de credenciales (lo usaremos mas adelante) y presiona "Next Step". 
+
+<img src="https://i.ibb.co/RHVTRpg/image.png" width="600">
+
+Presiona "Done".
+
+<img src="https://i.ibb.co/N9c8jbG/image.png" width="600">
+
+Presiona "Done".
+
+<img src="https://i.ibb.co/DtBxq0k/image.png" width="600">
+
+En la barra lateral en la seccion de Manage/Things podremos ver nuestra thing ya creada, ahora tenemos que configurar la policy de esa thing para que pueda funcionar sin restricciones en Aws. 
+
+<img src="https://i.ibb.co/dQTFLZY/image.png" width="600">
+
+En la barra lateral en la seccion de Secure/Policies podremos ver nuestra thing-policy, le damos clic para entrar y poder modificarla.
+
+<img src="https://i.ibb.co/jThNgtc/image.png" width="600">
+
+Presionamos "Edit policy document".
+
+<img src="https://i.ibb.co/gV0tMtf/image.png" width="600">
+
+Pegaremos el siguiente texto en el documento y lo guardamos.
+
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Effect": "Allow",
+        "Action": "iot:*",
+        "Resource": "*"
+        }
+    ]
+    }
+
+<img src="https://i.ibb.co/ydtTqB2/image.png" width="600">
+
+Una vez vez hecho esto, iremos en nuestra computadora a la carpeta con las credenciales que acabamos de descargar y la descomprimiremos.
+
+<img src="https://i.ibb.co/mFKPxcY/image.png" width="600">
+
+Entramos a la carpeta descomprimida y renombraremos los archivos de la siguiente forma.
+
+    ThingNAME.cert.pem -> ThingCert.cert.pem
+
+    ThingNAME.private.key -> PrivateCert.private.key
+
+<img src="https://i.ibb.co/jzZqZHh/image.png" width="600">
+
+Ya con los archivos renombrados, iremos a nuestra carpeta de Jupyter Notebook en la siguiente ruta.
+
+<img src="https://i.ibb.co/fN00K9G/image.png" width="600">
+
+En la esquina derecha hay un boton que dice "upload".
+
+<img src="https://i.ibb.co/jz27sTD/image.png" width="600">
+
+Al presionarlo podremos subir nuestros dos certificados a la carpeta.
+
+<img src="https://i.ibb.co/ggQ8hq1/image.png" width="600">
+
+Presiona cada uno de los botones de "upload" de color azul para terminar la subida de archivos.
+
+<img src="https://i.ibb.co/k6X04K2/image.png" width="600">
 
 ### Awscli Setup:
 
-Esta es la libreria de AWS para poder gestionar y realizar acciones en cloud mediante Python, por lo tanto tendremos realizar la siguiente configuracion 
+Esta es la libreria de AWS para poder gestionar y realizar acciones en cloud mediante Python, por lo tanto tendremos realizar la siguiente configuracion.
 
-## Model Training:
+En la consola de AWS abriremos el servicio IAM.
+
+<img src="https://i.ibb.co/qk3LP62/image.png" width="600">
+
+En la seccion de Access Management/Users de presionaremos el boton de Add user.
+
+<img src="https://i.ibb.co/xMpKZWz/image.png" width="600">
+
+Ponemos cualquier User name y le presionamos en "Next:Permissions"
+
+<img src="https://i.ibb.co/qMcmJSt/image.png" width="600">
+
+Presionamos "Attach existing polices directly", en el buscador escribimos "S3" y seleccionamos la policy "AmazonS3FullAccess".
+
+<img src="https://i.ibb.co/XYLz6DW/image.png" width="600">
+
+Presionamos el boton de "Next" hasta que lleguemos a la pantalla de success, en esta veremos el Access Key ID y el Secret Access Key, ambas claves debemos guardarlas para configurar el Awscli.
+
+<img src="https://i.ibb.co/kqmFzHg/image.png" width="600">
+
+Desde nuestra UI de Jupyter Notebook en la el boton de "new" abre un nuevo terminal.
+
+<img src="https://i.ibb.co/Tm0W9p4/image.png" width="600">
+
+En el terminal que se abrio escribe el siguiente comando.
+
+    aws configure
+
+<img src="https://i.ibb.co/ZYJ0zPy/image.png" width="600">
+
+Configura las credenciales de la siguiente forma
+
+    AWS Access Key ID [None]: YOUR ACCESS KEY ID
+    AWS Secret Access Key [None]: YOUR SECRET ACCESS KEY
+    Default region name [None]: us-east-1
+    Default output format [None]: json
+
+Listo ya hemos configurado completamente la Jetson Nano.
+
+# Model Training:
 
 Before performing any other task, it was vital to be able to generate a model for elbow rehabilitation, the system can be extended to any rehabilitation but we chose elbow as the first sample.
 
