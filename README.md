@@ -602,9 +602,12 @@ Entramos a la carpeta "Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy\
 
 <img src="https://i.ibb.co/mSW4dFD/image.png" width="600">
 
-Ya con todo cofigurado entramos en el navegador aAntes de hacer la revision de codigo tenemos que pegar en una de las variables nuestro URL del Bucket y nuestro Endpoint de AWS IoT.
+Ya con todo cofigurado entramos en el navegador antes de hacer la revision de codigo tenemos que pegar en una de las variables el nombre de nuestro Bucket y nuestro Endpoint de AWS IoT.
 
-<img src="https://i.ibb.co/MnFWkLz/image.png" width="600">
+<img src="https://i.ibb.co/wJdN3Bk/image.png" width="600">
+
+
+
 
 # The Final Product:
 
