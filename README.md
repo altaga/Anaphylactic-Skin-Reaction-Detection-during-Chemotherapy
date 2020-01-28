@@ -10,8 +10,8 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Materials](#materials)
 * [Connection Diagram](#connection-diagram)
 * [Jetson Setup](#jetson-setup)
-* [Model Training](#model-training)
-* [Laptop Setup](#laptop-setup)
+* [Webpage Setup](#webpage-set)
+* [Jupyter Notebook](#jupyter-notebook)
 * [Arm Setup](#arm-setup)
 * [The Final Product](#the-final-product)
 * [Future Rollout](#future-rollout)
@@ -592,99 +592,21 @@ Despues de un rato que se hayan instalado todas las dependencias del proyecto es
 
 <img src="https://i.ibb.co/SPdkwZL/ezgif-com-video-to-gif-2.gif" width="600">
 
-Elbow flexoextension:
+# Jupyter Notebook:
 
-<img src="https://i.ibb.co/qkX5VfF/image.png" width="400">
-<img src="https://i.ibb.co/RBY7K7L/image.png" width="400">
+Entramos a la UI de Jupyter Notebook entrando desde el navegador a "localhost:8000". Ya no les debera pedir el token.
 
-Arm Lift:
+<img src="https://i.ibb.co/LtkbFkF/image.png" width="600">
 
-<img src="https://i.ibb.co/CzXGq2v/image.png" width="400">
-<img src="https://i.ibb.co/XZdHHrS/image.png" width="400">
+Entramos a la carpeta "Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy\Jupyter Notebook\Anaphylactic Skin Reaction Detection during Chemotherapy.ipynb"
 
-Elbow Flexion:
+<img src="https://i.ibb.co/mSW4dFD/image.png" width="600">
 
-<img src="https://i.ibb.co/jkJ4qfd/image.png" width="400">
-<img src="https://i.ibb.co/hDrN088/image.png" width="400">
+Ya con todo cofigurado entramos en el navegador aAntes de hacer la revision de codigo tenemos que pegar en una de las variables nuestro URL del Bucket y nuestro Endpoint de AWS IoT.
 
-This is the model that was developed and the number of repetitions for each movement:
+<img src="https://i.ibb.co/MnFWkLz/image.png" width="600">
 
-<img src="https://i.ibb.co/mbXWD8T/image.png" width="400">
-
-Model motion confusion matrix:
-
-<img src="https://i.ibb.co/m4jWHMt/image.png" width="400">
-
-### Widget Configuration:
-
-Press the button to create the widget.
-
-<img src = "https://i.ibb.co/zZSCtkK/image.png" width = "500">
-
-We assign the model to the device.
-
-<img src = "https://i.ibb.co/wC98Vs3/image.png" width = "500">
-
-We create a widget as shown in the image.
-
-<img src = "https://i.ibb.co/tD5b4F3/image.png" width = "500">
-
-We finish the widget.
-
-<img src = "https://i.ibb.co/dkB1cJ0/image.png" width = "500">
-
-We will get a result like the following.
-
-<img src = "https://i.ibb.co/2shLmdn/image.png" width = "500">
-
-### Obtaining Credentials.
-
-Save External access token and User ID.
-
-<img src = "https://i.ibb.co/DCcdzCP/image.png" width = "500">
-
-## CloudMQTT Setup:
-
-Create an account in Cloud MQTT.
-
-https://www.cloudmqtt.com/
-
-Copy the credentials of "Server", "User", "Password" and "Port".
-
-<img src = "https://i.ibb.co/s9wR395/image.png" width = "1000">
-
-## Laptop Setup:
-
-Install Python Anaconda so that you can easily manipulate the MQTT broker, this had to be done because the Arduino library ESP32 for MQTT does not accept connectivity such as Websocket.
-
-https://www.anaconda.com/distribution/
-
-Then install this library:
-
-    pip install paho-mqtt
-
-Download the file Python Files, open "MQTTRehab.py" and put your credentials.
-
-## Arm Setup:
-
-Follow this diagram without making a mistake, IF YOU DON'T CONNECT IT WELL YOU CAN DO A SHORT CIRCUIT:
-
-<img src="https://hackster.imgix.net/uploads/attachments/942233/68747470733a2f2f692e6962622e636f2f4832344451384e2f41524d2d62622e706e67.png" width="800">
-
-After connecting all program the ESP32 with the code in the "Arduino Files" folder.
-
-<img src="https://www.e-ika.com/images/thumbs/0005376_placa-esp32-wifi-bluetooth_600.jpeg" width="800">
-
-Open the "ESP32ARMRehab.ino" file and enter the CloudMQTT credentials.
-
-    const char* ssid = "YOURSSID";
-    const char* password =  "YOURPASS";
-    const char* mqttServer = "m12.cloudmqtt.com";
-    const int mqttPort = 12345;
-    const char* mqttUser = "YOURCLOUDMQTTUSER";
-    const char* mqttPassword = "YOURCLOUDMQTTPASS";
-
-## The Final Product:
+# The Final Product:
 
 Robotic Arm:
 
@@ -705,7 +627,7 @@ Complete system:
 
 <img src="https://i.ibb.co/dMb7c6V/DSC00066-2.jpg" width="800">
 
-### Our Epic DEMO:
+### Epic DEMO:
 
 Video: Click on the image
 [![Rehab](https://i.ibb.co/Bjg48mh/Brainium-Rehab.png)](https://youtu.be/GYoLvldvk-s)
