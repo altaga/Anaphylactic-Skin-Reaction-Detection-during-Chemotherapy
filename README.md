@@ -12,7 +12,6 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Jetson Setup](#jetson-setup)
 * [Webpage Setup](#webpage-set)
 * [Jupyter Notebook](#jupyter-notebook)
-* [Arm Setup](#arm-setup)
 * [The Final Product](#the-final-product)
 * [Future Rollout](#future-rollout)
 * [References](#references)
@@ -594,6 +593,8 @@ Despues de un rato que se hayan instalado todas las dependencias del proyecto es
 
 # Jupyter Notebook:
 
+### Final Setup:
+
 Entramos a la UI de Jupyter Notebook entrando desde el navegador a "localhost:8000". Ya no les debera pedir el token.
 
 <img src="https://i.ibb.co/LtkbFkF/image.png" width="600">
@@ -605,9 +606,6 @@ Entramos a la carpeta "Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy\
 Ya con todo cofigurado entramos en el navegador antes de hacer la revision de codigo tenemos que pegar en una de las variables el nombre de nuestro Bucket y nuestro Endpoint de AWS IoT.
 
 <img src="https://i.ibb.co/wJdN3Bk/image.png" width="600">
-
-
-
 
 # The Final Product:
 
