@@ -616,23 +616,23 @@ Product:
 
 Essential components:
 
-<img src="https://i.ibb.co/tMqn5hJ/Conection.jpg" width="800">
+<img src="https://i.ibb.co/RT94wM3/Conection.jpg" width="800">
 
 UI:
 
-* Real time model  
+* Real time model performance
 <img src="https://i.ibb.co/HPZ5MMb/image.png" width="800">
+
+* Real time emergency notifications
 <img src="https://i.ibb.co/F0BT9Mp/image.png" width="800">
+
+* Patient database search tool
 <img src="https://i.ibb.co/yVVtD9G/image.png" width="800">
-
-Complete system:
-
-<img src="https://i.ibb.co/dMb7c6V/DSC00066-2.jpg" width="800">
 
 ### Epic DEMO:
 
 Video: Click on the image
-[![Rehab](https://i.ibb.co/Bjg48mh/Brainium-Rehab.png)](https://youtu.be/GYoLvldvk-s)
+[![Cancer](https://i.ibb.co/p1MvBJF/Logo.png)](https://youtu.be/GYoLvldvk-s)
 
 Sorry github does not allow embed videos.
 
@@ -643,8 +643,6 @@ Sorry github does not allow embed videos.
 ## References:
 
 Links 
-
-
 
 ## Apendix A:
 
