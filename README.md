@@ -10,11 +10,12 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 * [Materials](#materials)
 * [Connection Diagram](#connection-diagram)
 * [Jetson Setup](#jetson-setup)
-* [Webpage Setup](#webpage-set)
+* [Webpage Setup](#webpage-setup)
 * [Jupyter Notebook](#jupyter-notebook)
 * [The Final Product](#the-final-product)
 * [Future Rollout](#future-rollout)
 * [References](#references)
+* [Apendix](#apendix-a)
 
 # Introduction:
 
