@@ -28,10 +28,6 @@ If the first symptoms regarding flushing, blushing and facial redness can be det
 
 This problem is quite severe and happens even in top of the line hospitals (2). Personally I worked in one of these, and to my surprise these kinds of reactions happen quite often and I think that AI and CV technologies have the capability to tend to this problem faster and directly so medical professionals can have a faster reaction to it.
 
-(1) https://ctep.cancer.gov/protocolDevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_8.5x11.pdf
-
-(2) https://www.ncbi.nlm.nih.gov/books/NBK333506/table/ch04.sec1.table1/
-
 # Materials:
 
 Hardware:
@@ -642,7 +638,12 @@ Sorry github does not allow embed videos.
 
 ## References:
 
-Links 
+Links:
+
+(1) https://ctep.cancer.gov/protocolDevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_8.5x11.pdf
+
+(2) https://www.ncbi.nlm.nih.gov/books/NBK333506/table/ch04.sec1.table1/
+
 
 ## Apendix A:
 
