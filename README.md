@@ -609,20 +609,21 @@ Ya con todo cofigurado entramos en el navegador antes de hacer la revision de co
 
 # The Final Product:
 
-Robotic Arm:
+Product:
 
-<img src="https://i.ibb.co/X3JNNLB/DSC00056-2.jpg" width="800">
-<img src="https://i.ibb.co/HHM2DQ1/DSC00059-2.jpg" width="800">
+<img src="https://i.ibb.co/cNx1sFw/ps2.jpg" width="800">
+<img src="https://i.ibb.co/6BRDwXz/PsNew.jpg" width="800">
 
-ESP32 Arm Driver:
+Essential components:
 
-<img src="https://i.ibb.co/mJ73KNs/DSC00068.jpg" width="800">
+<img src="https://i.ibb.co/tMqn5hJ/Conection.jpg" width="800">
 
-Brainium Module:
+UI:
 
-<img src="https://i.ibb.co/cFZrYdJ/DSC00061-2.jpg" width="800">
-<img src="https://i.ibb.co/kgds0Xn/DSC00062-2.jpg" width="800">
-<img src="https://i.ibb.co/xFm1f0T/DSC00063-2.jpg" width="800">
+* Real time model  
+<img src="https://i.ibb.co/HPZ5MMb/image.png" width="800">
+<img src="https://i.ibb.co/F0BT9Mp/image.png" width="800">
+<img src="https://i.ibb.co/yVVtD9G/image.png" width="800">
 
 Complete system:
 
