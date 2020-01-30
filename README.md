@@ -187,7 +187,7 @@ We will configure the operating system, it is very simple.
 
 * This animation shows the final setup of the operating system.
 
-<img src="https://i.ibb.co/QH5VwCT/ezgif-com-video-to-gif-4.gif" width="600">
+<img src="https://i.ibb.co/C2sh67K/ezgif-com-resize-2.gif" width="600">
 
 * With this you should already have everything configured, from now on the HDMI cable and the wireless keyboard are no longer necessary. All programming and final setup will be done through SSH.
 
