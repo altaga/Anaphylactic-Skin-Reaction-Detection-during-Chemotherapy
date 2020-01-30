@@ -1,6 +1,6 @@
 # Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy
 
-Anaphylactic Skin Reaction Detection during Chemotherapy powered by Nvidia
+Anaphylactic Skin Reaction Detection during Chemotherapy powered by Nvidia 
 
 <img src="https://i.ibb.co/p1MvBJF/Logo.png" width="1000">
 
