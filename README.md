@@ -1,6 +1,6 @@
 # Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy
 
-Anaphylactic Skin Reaction Detection during Chemotherapy
+Anaphylactic Skin Reaction Detection during Chemotherapy powered by Nvidia
 
 <img src="https://i.ibb.co/p1MvBJF/Logo.png" width="1000">
 
@@ -21,7 +21,7 @@ Anaphylactic Skin Reaction Detection during Chemotherapy
 
 Nowadays we have serious problems in healthcare. Despite the fact that many of them have already been solved with technology, many times the industry is reluctant to change and adopt new technologies. 
 
-Cancer patients, for example, have to be treated with chemotherapy continuously, however this process is not simple or pleasant. The worst part of this, is the possibility of being allergic to chemotherapy. Approximately 12 percent of patients who are treated in chemotherapy have an allergic reaction to it, which can trigger a simple blush to death. This is a very studied phenomenon which have several symptoms and phases. One of the main symptoms (1) before severe anaphylaxis in this type of treatment is flushing of the face, after that there may be symptoms such as:
+Cancer patients, for example, have to be treated with chemotherapy continuously, however this process is not simple or pleasant. The worst part of this, is the possibility of being allergic to chemotherapy. Approximately 12 percent of patients who are treated with chemotherapy have an allergic reaction to it, which can trigger symptoms that go from a simple blush to death. This is a very studied phenomenon which have several symptoms and phases. One of the main symptoms (1) before severe anaphylaxis in this type of treatment is face flushing or blushing, after that there may be symptoms such as:
 
 <img src="https://i.ibb.co/5cmbf4K/image.png" width="1000">
 
@@ -89,7 +89,7 @@ We recommend downloading the latest version of the SDK, in this guide I use vers
 
 Official Link: https://developer.nvidia.com/embedded/jetpack
 
-You'll need to unzip the file to get the image file (.img) to write to your SD card, If you do not have a program to unzip, i recommend any of the following according to your operating system (windows in my case).
+You'll need to unzip the file to get the image file (.img) to write to your SD card. If you do not have a program to unzip, I recommend any of the following according to your operating system (windows in my case).
 
 7-Zip (Windows):
 
@@ -115,23 +115,23 @@ Linux:
 
 https://www.pcworld.com/article/3176712/how-to-format-an-sd-card-in-linux.html
 
-My computer does not have an SD card reader so I use this external (any reader it's ok).
+My computer does not have an SD card reader so I use this external one (any reader is ok).
 
 <img src="https://i.ibb.co/drrQkgs/20200125-180653.jpg" width="600">
 
-And this is the software SD card formatter, I especially like this program because this type of operating system creates multiple partitions in the SD memories and the format of them can be complicated if we want to reformat later, however this program does everything automatically.
+And this is the software for the SD card formatter. I especially like this program because this type of operating system creates multiple partitions in the SD memory and the format of them can be complicated if we want to reformat later, however this program does everything automatically.
 
 <img src="https://i.ibb.co/yQ0mmc1/image.png" width="400">
 
 ## Flash the sd card with the OS
 
-You will need to use an image writing tool to install the image you have downloaded on your SD card, I recommend balenaEtcher it works on all OS and it is not necessary to unzip the .zip to perform the OS flash.
+You will need to use an image writing tool to install the image you have downloaded on your SD card. I recommend balenaEtcher as it works on all OSs and it is not necessary to unzip the .zip to perform the OS flash.
 
 Download Link: https://www.balena.io/etcher/
 
 <img src="https://i.ibb.co/TWMH7FM/image.png" width="600">
 
-Once the process is completed correctly we see the following message.
+Once the process is completed correctly, we see the following message.
 
 <img src="https://i.ibb.co/zJSdVG4/image.png" width="600">
 
@@ -189,7 +189,7 @@ We will configure the operating system, it is very simple.
 
 <img src="https://i.ibb.co/QH5VwCT/ezgif-com-video-to-gif-4.gif" width="600">
 
-* With this you should already have everything configured, from now the HDMI cable and the wireless keyboard are no longer necessary. All programming and final setup will be done through SSH.
+* With this you should already have everything configured, from now on the HDMI cable and the wireless keyboard are no longer necessary. All programming and final setup will be done through SSH.
 
 ## SSH Setup:
 
@@ -219,7 +219,7 @@ Click "Yes" to bring up the following window, as long as you do not format the J
 
 <img src="https://i.ibb.co/QHCLHSs/image.png" width="600">
 
-After putting the password in the command console, this window will appear, indicating that we are already connected to the Jetson Nano.
+After inputting the password in the command console, this window will appear, indicating that we are already connected to the Jetson Nano.
 
 <img src="https://i.ibb.co/brWpyCW/image.png" width="600">
 
@@ -235,9 +235,9 @@ Once the wireless connection to the console is established, we will have to copy
 
         cd Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy/Installer
 
-* This command will install all the libraries and configurations necessary to setup the project correctly, to facilitate its installation i make an .sh file that performs all this automatically, however I also attached the commands separately in [Apendix A](#apendix-a), also the file can be reviewed by any text editor such as Notepad, Atom, VsCode, etc ...
+* This command will install all the libraries and configurations necessary to setup the project correctly. To facilitate its installation I'll make an .sh file that performs all this automatically, however I also attached the commands separately in [Apendix A](#apendix-a). Also the file can be reviewed by any text editor such as Notepad, Atom, VsCode, etc ...
 
-**NOTE: Go for a coffee, some cookies and see the next chapter of your favorite series, because this process according to your internet connection can take 45 minutes to 2 hours to complete.**
+**NOTE: Go for a coffee, some cookies and see the next chapter of your favorite series, because this process can take 45 minutes to 2 hours to complete, depending on your internet connection.**
 
         sudo bash Install.sh
 
@@ -250,79 +250,79 @@ With this process we will have all the libraries installed correctly:
 * PahoMQTT
 * OpenCV (No Contrib Version)
 
-Una vez este proceso haya concluido, revisaremos que Jupyter Notebook funcione correctamente, ya que sera nuestra UI en el resto del tutorial. Escribe en la consola el siguiente comando.
+Once this process has concluded, we have to check that the Jupyter notebook works correctly, as it will be our UI for the rest of the tutorial. Next, write the following command:
 
     jupyter notebook
 
-Debera aparecer en el terminal algo asi.
+You should see something like this in the terminal:
 
 <img src="https://i.ibb.co/YD0DMBs/image.png" width="600">
 
-Copia el Token que aparece en la pantalla y sin cerrar esta ventana ir al tu navegador y poner en la barra de direcciones:
+Copy the token that appears and without closing the window go to a browser and on the address bar input:
 
     localhost:8000
 
-Debera aparecer una ventana como la siguiente:
+You should get a window such as this one:
 
 <img src="https://i.ibb.co/Y8dkkrM/image.png" width="600">
 
-En la seccion donde nos pide el token, pegaremos token que copiamos hace unos momentos.
+Paste the token you copied previously:
 
 <img src="https://i.ibb.co/LtkbFkF/image.png" width="600">
 
-Si el token es valido deberiamos tener en el navegador los archivos de la Jetson, esto es importante ya que esta ventana nos permite gestionar los archivos de manera sencilla, ademas de poder ejecutar los archivos del proyecto.
+If the token was valid we should have the Jetson files open on the browse, this is important because this window will allow us to manage the files easily, and allow us to execute the project's files.
 
-## Configurando AWS Jetson:
+## AWS Jetson setup:
 
-Primero deberemos acceder a nuestra consola de AWS y buscar el servicio IoT Core.
+First we have ti access our AWS console y look for the IoT core service:
 
 <img src="https://i.ibb.co/KVbtQLR/image.png" width="600">
 
-Primero obtendremos nuestro Endpoint de AWS, guarda muy bien esto ya que lo usaremos para configurar la Jetson y la Webpage.
+Obtain your AWS endpoint, save it because we will use it to setup the JEtson and the webpage.
 
 <img src="https://i.ibb.co/ZYwrdfR/image.png" width="600">
 
-En el panel lateral seleccionaremos la opcion de "Onboard" y luego en la opcion de "Get started".
+In the lateral panel select the "Onboard" option and then "Get started".
 
 <img src="https://i.ibb.co/gmKxc7P/image.png" width="600">
 
-Selecciona "Get started".
+Select "Get started".
 
 <img src="https://i.ibb.co/XSxSxbF/image.png" width="600">
 
-En Choose a Platform selecciona "Linux/OSX" en AWS IoT Device SDK selecciona "Python" y haz clic en "Next". 
+In "Choose a platform" select "Linux/OSX", in AWS IoT DEvice SDK select "Python" and then click "Next".
 
 <img src="https://i.ibb.co/JR69Fdd/image.png" width="600">
 
-En Name escribe cualquier nombre que te parezca conveniente y haz clic en "Next step". 
+In Name write any name you'd like and then click on "Next step".
 
 <img src="https://i.ibb.co/NNLqqM0/image.png" width="600">
 
-En la seccion "Download connection kit for" presiona el boton "Linux/OSX" para descargar el paquete de credenciales (lo usaremos mas adelante) y presiona "Next Step". 
+In the section, "Download connection kit for" press the button "Linux/OSX" to download the credential package (which we will use later) and click on "Next Step".
 
 <img src="https://i.ibb.co/RHVTRpg/image.png" width="600">
 
-Presiona "Done".
+Click "Done".
 
 <img src="https://i.ibb.co/N9c8jbG/image.png" width="600">
 
-Presiona "Done".
+Click "Done".
 
 <img src="https://i.ibb.co/DtBxq0k/image.png" width="600">
 
-En la barra lateral en la seccion de Manage/Things podremos ver nuestra thing ya creada, ahora tenemos que configurar la policy de esa thing para que pueda funcionar sin restricciones en Aws. 
+In the lateral bar, inside the Manage/Things section we can see our thing already created. Now we have to set up the policy of that thing for it to work without restrictions in AWS.
 
 <img src="https://i.ibb.co/dQTFLZY/image.png" width="600">
 
-En la barra lateral en la seccion de Secure/Policies podremos ver nuestra thing-policy, le damos clic para entrar y poder modificarla.
+In the lateral bar, in the Secure/Policies section we can see our thing-policy, click on it to modify it:
 
 <img src="https://i.ibb.co/jThNgtc/image.png" width="600">
 
-Presionamos "Edit policy document".
+Click on "Edit policy document".
 
 <img src="https://i.ibb.co/gV0tMtf/image.png" width="600">
 
-Pegaremos el siguiente texto en el documento y lo guardamos.
+Copy-paste the following text in the document and save it.
 
     {
     "Version": "2012-10-17",
@@ -337,11 +337,11 @@ Pegaremos el siguiente texto en el documento y lo guardamos.
 
 <img src="https://i.ibb.co/ydtTqB2/image.png" width="600">
 
-Una vez vez hecho esto, iremos en nuestra computadora a la carpeta con las credenciales que acabamos de descargar y la descomprimiremos.
+Once this is done, we will go to our pc and to the folder with the credentials previously downloaded and extract them.
 
 <img src="https://i.ibb.co/mFKPxcY/image.png" width="600">
 
-Entramos a la carpeta descomprimida y renombraremos los archivos de la siguiente forma.
+We enter the extracted folder and we will rename the files the following way:
 
     ThingNAME.cert.pem -> ThingCert.cert.pem
 
@@ -349,112 +349,112 @@ Entramos a la carpeta descomprimida y renombraremos los archivos de la siguiente
 
 <img src="https://i.ibb.co/jzZqZHh/image.png" width="600">
 
-Ya con los archivos renombrados, iremos a nuestra carpeta de Jupyter Notebook en la siguiente ruta.
+Now, with the files already renamed we will go to our Jupyter Notebook in the following route:
 
 <img src="https://i.ibb.co/fN00K9G/image.png" width="600">
 
-En la esquina derecha hay un boton que dice "upload".
+In the right corner there's a button that says "upload"
 
 <img src="https://i.ibb.co/jz27sTD/image.png" width="600">
 
-Al presionarlo podremos subir nuestros dos certificados a la carpeta.
+By clicking on it we are able to upload our two certificates to the folder.
 
 <img src="https://i.ibb.co/ggQ8hq1/image.png" width="600">
 
-Presiona cada uno de los botones de "upload" de color azul para terminar la subida de archivos.
+Click every single one of the blue colored "upload" buttons to finish the file upload.
 
 <img src="https://i.ibb.co/k6X04K2/image.png" width="600">
 
-Listo ya tenemos las credenciales listas para funcionar.
+By this point we should have all the necessary credentials.
 
-## Awscli Setup:
+## AWSCLI Setup:
 
-Esta es la libreria de AWS para poder gestionar y realizar acciones en cloud mediante Python, por lo tanto tendremos realizar la siguiente configuracion.
+This is the AWS library to manage and execute actions via Python for Cloud, so we have to set it up like so:
 
-En la consola de AWS abriremos el servicio IAM.
+At the console we go to the IAM service.
 
 <img src="https://i.ibb.co/qk3LP62/image.png" width="600">
 
-En la seccion de Access Management/Users de presionaremos el boton de Add user.
+In the Access Management/Users section we click on Add user.
 
 <img src="https://i.ibb.co/xMpKZWz/image.png" width="600">
 
-Ponemos cualquier User name y le presionamos en "Next:Permissions"
+We type any username and we click on "Next:Permissions"
 
 <img src="https://i.ibb.co/qMcmJSt/image.png" width="600">
 
-Presionamos "Attach existing polices directly", en el buscador escribimos "S3" y seleccionamos la policy "AmazonS3FullAccess".
+Click "Attach existing polices directly", at the searchbar we write "S3" and we select the "AmazonS3FullAccess" policy.
 
 <img src="https://i.ibb.co/XYLz6DW/image.png" width="600">
 
-Presionamos el boton de "Next" hasta que lleguemos a la pantalla de success, en esta veremos el Access Key ID y el Secret Access Key, ambas claves debemos guardarlas para configurar el Awscli.
+We click on "Next" until we reach the success screen, where we will see the Access Key ID and the Secret Access Key, both keys we have to save in order to set up the Awscli.
 
 <img src="https://i.ibb.co/kqmFzHg/image.png" width="600">
 
-Desde nuestra UI de Jupyter Notebook en la el boton de "new" abre un nuevo terminal.
+From our Jupyter notebook UI at the "new" button open a new terminal.
 
 <img src="https://i.ibb.co/Tm0W9p4/image.png" width="600">
 
-En el terminal que se abrio escribe el siguiente comando.
+Typoe the following command on it.
 
     aws configure
 
 <img src="https://i.ibb.co/ZYJ0zPy/image.png" width="600">
 
-Configura las credenciales de la siguiente forma
+Configure the credentials the following way:
 
     AWS Access Key ID [None]: YOUR ACCESS KEY ID
     AWS Secret Access Key [None]: YOUR SECRET ACCESS KEY
     Default region name [None]: us-east-1
     Default output format [None]: json
 
-Listo ya hemos configurado completamente la Jetson Nano.
+Ready! we have now configured the Jetson Nano.
 
 # Webpage Setup:
 
 ## Aws Credentials Setup:
 
-Entrar en la consola de AWS y buscar el servicio "Cognito".
+Enter the AWS console and search for the "Cognito" service.
 
 <img src="https://i.ibb.co/nrF8P0W/image.png" width="600">
 
-Entramos en "Manage Identity Pools"
+Enter "Manage Identity Pools"
 
 <img src="https://i.ibb.co/Rh0mMQL/image.png" width="600">
 
-Entramos en "Manage Identity Pools"
+Enter "Manage Identity Pools"
 
 <img src="https://i.ibb.co/GMHB0d2/image.png" width="600">
 
-Entramos en "Create new identity pool"
+Enter "Create new identity pool"
 
 <img src="https://i.ibb.co/Rh0mMQL/image.png" width="600">
 
-Le ponemos cualquier nombre a la pool y check a "Enable access to unauthenticated identities" y le presionamos en "Create Pool"
+Type any name at the pool and check "Enable access to unauthenticated identities" and click on "Create Pool"
 
 <img src="https://i.ibb.co/VJS43ff/Untitled-2.png" width="600">
 
-En la siguiente ventana solo da clic en "Allow".
+Just click "Allow".
 
 <img src="https://i.ibb.co/c3qgj5H/image.png" width="600">
 
-Obtuvimos nuestro POOLID guardalo que lo usaremos mas adelante.
+We just got our POOLID, save it as we will use it afterwards.
 
 <img src="https://i.ibb.co/xhBfqVk/image.png" width="600">
 
-Ve a la consola de AWS y entra a "IAM".
+Go to the AWS console and enter "IAM".
 
 <img src="https://i.ibb.co/qk3LP62/image.png" width="600">
 
-Dentro de la consola entra a la seccion de Roles en la barra de busqueda escibe "web" y entra en la que dice "Cognito_WebPagePoolUnauth_Role".
+Inside the console enter the Role section, at the searchbar write "web" and enter in the one that says "Cognito_WebPagePoolUnauth_Role".
 
 <img src="https://i.ibb.co/r0kcdvz/image.png" width="600">
 
-Dentro del Role presionamos el boton de Attach policies para agregar los servicios que requerimos dentro de nuestra WebApp.
+Inside the Role we click on the Attach policies button to add the services we need for our webapp.
 
 <img src="https://i.ibb.co/vZdLsFj/image.png" width="600">
 
-Dentro de esta ventana tenemos que agregar 3 servicios.
+Inside that window we need to add three services:
 
 * AmazonS3FullAccess
 * AWSIoTFullAccess
@@ -462,15 +462,14 @@ Dentro de esta ventana tenemos que agregar 3 servicios.
 
 <img src="https://i.ibb.co/mFY33w9/image.png" width="600">
 
-Ya que tenemos creados los permisos vamos a configurar la base de datos donde tendremos almacenados a los pacientes, desde la consola de AWS buscaremos el servicio DynamoDB.
-
+Now that we have the permissions required we part ways to configure the database where we will have the patient's information. From the AWS we will search for DynamoDB.
 <img src="https://i.ibb.co/W3MH7Zf/image.png" width="600">
 
-Seleccionamos la opcion de Create Table.
+Select Create Table.
 
 <img src="https://i.ibb.co/k35HZ30/image.png" width="600">
 
-Crea la tabla con los siguientes parametros, es importante que los nombres sean los mismos que estamos mostrando en la imagen.
+Create a table with the following parameters, it is important that the names are the same ones we are showing in the image.
 
 Name: HacksterDB
 Partition Key: PartKey
@@ -478,7 +477,7 @@ Sort Key: SortKey
 
 <img src="https://i.ibb.co/dbFqpF6/image.png" width="600">
 
-Una vez creada la tabla podremos generar registros en ella de pacientes que podremos visualizar en nuestra plataforma, los registros deben de llevar la siguiente estructura.
+Once the table is created we can generate registers on it about patients which we will be able to visualize on our platform, the registers have to follow the following structure.
 
     {
     "Age": "56",
@@ -491,98 +490,98 @@ Una vez creada la tabla podremos generar registros en ella de pacientes que podr
     "SortKey": "Jen-Hsun Huang"
     }
 
-* Descipcion del registro:
-    * Age: La edad de la persona
-    * App: Fecha de su siguiente cita
-    * Cancer: Tipo de Cancer de la persona
-    * Comments: Comentarios extra sobre la persona
-    * Incidents: Numero de incidentes hasta la fecha
-    * Medicine: Medicina que se le proporciona al paciente
-    * PartKey: El device que esta mandando el registro
-    * SortKey: Nombre del paciente
+* Desciption of the registers:
+    * Age: age of the person
+    * App: Date of his following appointment
+    * Cancer: Type of Cancer
+    * Comments: Any comments of the specialist
+    * Incidents: Number of incidents to date.
+    * Medicine: Pharmacological treatments
+    * PartKey: The device that procures the register
+    * SortKey: Name of the patient
 
-Por ultimo vamos a crear un S3 bucket el cual nos sirva para almacenar cualquier archivo o imagen que necesitemos. Desde la consola de AWS buscaremos el servicio S3.
+Finally we will create an S3 bucket which will allow us to store any file or image we need. From the AWS console look for the S3 service.
 
 <img src="https://i.ibb.co/dtCKMBj/image.png" width="600">
 
-Dentro del servicio de S3 presionamos el boton para crear un bucket.
+On S3 click the button to create a bucket.
 
 <img src="https://i.ibb.co/zstLq8T/image.png" width="600">
 
-Pon el nombre que gustes al bucket, pero anotalo que lo configuraremos despues.
+Type any name for the bucket but remember it as we will call it back afterwards.
 
 <img src="https://i.ibb.co/PDmWFrs/image.png" width="600">
 
-Uncheck todas las opciones de bloqueo como se muestran en la imagen.
+Uncheck all the block options as in the image:
 
 <img src="https://i.ibb.co/FW4Fqbv/image.png" width="600">
 
-Una vez termines esto, ya tendremos todo listo para configurar nuetsra WebAPP.
+Once all that is finished, we have everything ready to setup our webapp.
 
 <img src="https://i.ibb.co/2ZP8mw0/image.png" width="600">
 
-Uncheck todas las opciones de bloqueo como se muestran en la imagen.
+Uncheck all the options to block as in the image:.
 
 <img src="https://i.ibb.co/FW4Fqbv/image.png" width="600">
 
-Ya con esto habremos creado nuestro bucket, el cual tiene el siguiente URL.
+With this done we have created our bucket, with the following URL.
 
     https://yourbucketname.s3.amazonaws.com/
 
-## Add credentials to WebPage
+## Add credentials to the WebPage
 
-Descargar el proyecto de Github en su computadora.
+Download the Github file to your PC.
 
 <img src="https://i.ibb.co/Ksd8Y42/image.png" width="600">
 
-Entra dentro de la carpeta del proyecto entra en la siguiente ruta ReactAPP\src\views\examples.
+Inside the project folder go to: ReactAPP\src\views\examples.
 
 <img src="https://i.ibb.co/Xt0yFmm/image.png" width="600">
 
-Con el editor de tu preferencia abre los siguientes archivos.
+With your favourite editor open the following files:
 
 * aws-configuration.js
 * MyCard.jsx
 * Card.jsx
 * Profile.jsx
 
-Dentro de aws-configuration.js vamos a pegar nuestro POOLID y nuestro AWS Endpoint.
+Inside aws-configuration.js paste our POOLID and our AWS Endpoint.
 
 <img src="https://i.ibb.co/tsYPQBw/image.png" width="600">
 
-Dentro de MyCard.jsx vamos a pegar nuestro Url de Bucket.
+Inside MyCard.jsx paste your bucket URL.
 
 <img src="https://i.ibb.co/TWscqmB/image.png" width="600">
 
-Dentro de Card.jsx vamos a pegar nuestro Url de Bucket.
+Inside Card.jsx paste your bucket URL.
 
 <img src="https://i.ibb.co/bbJdCPS/image.png" width="600">
 
-Dentro de Profile.jsx vamos a pegar el nombre de la DB que le pusimos si el nombre que le pusiste a la DB fue "HacksterDB" no tienes te hacer nada mas.
+Inside Profile.jsx paste the name of the DB, if you named it "HacksterDB" you don't need to do anything else.
 
 <img src="https://i.ibb.co/HpsxRFp/image.png" width="600">
 
-Para poder visualizar la DB en un navegador debemos instalar en nuestro ordenador NodeJS.
+To visualize the DB in a Navigator you need to install NodeJS in your computer.
 
 Link: https://nodejs.org/es/
 
-Una vez instalado entrar en la capeta del proyecto llamada "ReactAPP".
+Once installed enter the folder of the project called "ReactAPP".
 
 <img src="https://i.ibb.co/NsHJj18/image.png" width="600">
 
-Una vez dentro de la carpeta abre el terminal o en caso de windows el cmd.
+Once there, oper the terminal or in the case of windows cmd.
 
-NOTA: En windows si estas dentro de una carpeta y en la barra de direccion escribes "cmd" se abrira ahi la consola de comandos.
+NOTE: If you are using windows just type cmd on the search bar.
 
 <img src="https://i.ibb.co/F3b8GGd/ezgif-2-e535d3643141.gif" width="600">
 
-In the cmd or terminal wrtite the next commmand.
+In the cmd or terminal write the next commmand.
 
     npm install
 
 <img src="https://i.ibb.co/bgp4Ms6/image.png" width="600">
 
-Despues de un rato que se hayan instalado todas las dependencias del proyecto escribiremos en la consola.
+After all the dependencies ave been installed, at the console write:
 
     npm start
 
@@ -592,15 +591,15 @@ Despues de un rato que se hayan instalado todas las dependencias del proyecto es
 
 ### Final Setup:
 
-Entramos a la UI de Jupyter Notebook entrando desde el navegador a "localhost:8000". Ya no les debera pedir el token.
+Enter the Jupyter notebook UI from the browser at "localhost:8000". The token should not longer be needed.
 
 <img src="https://i.ibb.co/LtkbFkF/image.png" width="600">
 
-Entramos a la carpeta "Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy\Jupyter Notebook\Anaphylactic Skin Reaction Detection during Chemotherapy.ipynb"
+Enter the "Anaphylactic-Skin-Reaction-Detection-during-Chemotherapy\Jupyter Notebook\Anaphylactic Skin Reaction Detection during Chemotherapy.ipynb" folder
 
 <img src="https://i.ibb.co/mSW4dFD/image.png" width="600">
 
-Ya con todo cofigurado entramos en el navegador antes de hacer la revision de codigo tenemos que pegar en una de las variables el nombre de nuestro Bucket y nuestro Endpoint de AWS IoT.
+With everything set up we now enter the browser before performing the code revision we need to paste our Bucket name and AWS IoT Endpoint.
 
 <img src="https://i.ibb.co/wJdN3Bk/image.png" width="600">
 
