@@ -634,7 +634,7 @@ Sorry github does not allow embed videos.
 
 ## Future Rollout:
 
- inventa algo
+This is just an initial approximation, before February 17th we will have a much more polished final project.
 
 ## References:
 
