@@ -670,3 +670,7 @@ Install.sh Content:
     sudo apt-get install python3-matplotlib python3-opencv python3-scipy -y 
 
 [Return to Libraries Setup](#libraries-setup)
+
+
+Video: Click on the image
+[![Computer](https://i.ibb.co/pR4jJm8/yt.png)](https://youtu.be/Jg_PpRa7XLs)
