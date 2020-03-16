@@ -671,6 +671,3 @@ Install.sh Content:
 
 [Return to Libraries Setup](#libraries-setup)
 
-
-Video: Click on the image
-[![Computer](https://i.ibb.co/pR4jJm8/yt.png)](https://youtu.be/Jg_PpRa7XLs)
